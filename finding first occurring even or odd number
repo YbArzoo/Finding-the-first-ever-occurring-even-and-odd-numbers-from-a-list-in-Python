@@ -1,0 +1,29 @@
+my_list = input().split(",")
+for n in range(0, len(my_list)):
+  my_list[n] = int(my_list[n])
+
+#This code above solves the problem. We have taken the list as an input in a neat way.
+
+comment = "Not found"
+comment_2 = "Not found"
+
+
+#I have taken 2 comments, one for even; one for odd. 
+
+#checking for even numbers
+
+for items in my_list:
+  if items % 2 == 0:
+    comment = items   #Notice that I have assigned the variable to items
+    break
+
+
+#checking for odd numbers and repeating the whole process
+
+for items_2 in my_list:
+  if items_2 % 2 != 0:
+    comment_2 = items_2
+    break
+    
+print(my_list)
+print("First even: " + str(comment), "and first odd: " + str(comment_2))
